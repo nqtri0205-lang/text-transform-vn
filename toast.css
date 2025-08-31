@@ -1,0 +1,20 @@
+/* ========== Toast thông báo copy ========== */
+.vt-toast {
+    position: fixed;
+    right: 18px;
+    top: 18px;           /* đổi từ bottom thành top */
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(-8px); /* đổi hướng hiệu ứng: từ trên xuống */
+    transition: opacity .18s, transform .18s;
+    z-index: 2000;
+}
+
+.vt-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,53 @@
+/* ========== Kết quả (container) ========== */
+.result-box {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 6px 0;
+    cursor: pointer;
+    min-height: 50px;
+    font-weight: 500;
+    white-space: pre-wrap;
+    word-break: break-word;
+    transition: background .15s ease;
+}
+
+.result-box:hover {
+    background: #e6f7ff;
+}
+
+/* ========== Mỗi dòng kết quả ========== */
+.result-line {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    user-select: text;
+    white-space: pre-wrap;
+    word-break: break-word;
+    transition: background .12s, transform .06s;
+    outline: none;
+}
+
+.result-line:hover {
+    background: rgba(62, 166, 255, 0.06);
+    transform: translateY(-1px);
+}
+
+.result-line:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+}
+
+/* khoảng cách giữa các dòng */
+.card .result-line+.result-line {
+    margin-top: 0;
+}
+
+/* ========== Container kết quả tối thiểu ========== */
+#vietUpper,
+#vietTitle,
+#vietNoAccent {
+    min-height: 48px;
+}
+
+

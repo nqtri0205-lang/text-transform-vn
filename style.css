@@ -1,0 +1,30 @@
+/* ========== Theme ========== */
+body.light {
+    background: #fff;
+    color: #000;
+}
+
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+/* ========== Layout chung ========== */
+.card {
+    min-height: 120px;
+}
+
+textarea {
+    font-family: monospace;
+}
+
+/* ========== Card hiệu ứng hover ========== */
+.result-card {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
