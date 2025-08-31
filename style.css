@@ -28,3 +28,9 @@ textarea {
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+/* Tắt bôi đen khi click copy */
+.result-box, 
+.result-line {
+    user-select: none;
+}
+
