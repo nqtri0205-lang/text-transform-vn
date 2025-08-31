@@ -1,11 +1,19 @@
 function cleanChapter() {
     let html = document.getElementById("chapterInput").value;
-    let text = html.replace(/<[^>]*>/g, "\n") // bỏ thẻ HTML
-        .replace(/\n\s*\n+/g, "\n\n") // gom dòng trống
-        .trim();
-    document.getElementById("chapterOutput").innerText = text;
-}
 
+    // 1. Xóa toàn bộ <script>...</script> và các đoạn new Image().src
+    html = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "");
+    html = html.replace(/new Image\(\)\.src\s*=\s*".*?";/g, "");
+
+    // 2. Bỏ tất cả thẻ HTML còn lại
+    let text = html.replace(/<[^>]*>/g, "\n");
+
+    // 3. Gom dòng trống, trim gọn
+    text = text.replace(/\n\s*\n+/g, "\n\n").trim();
+
+    // 4. Xuất ra màn hình
+    document.getElementById("chapterOutput").innerText = text;
+} 
 function copyChapter() {
     let output = document.getElementById("chapterOutput").innerText;
     if (!output.trim()) {
@@ -43,3 +51,4 @@ function printChapter() {
     printWindow.print();
     showToast("Đã gửi lệnh in");
 }
+
